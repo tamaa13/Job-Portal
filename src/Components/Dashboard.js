@@ -62,6 +62,7 @@ const Dashboard = () => {
                 })
             setFetchStatus(false)
         }
+        // eslint-disable-next-line
     }, [fetchStatus, setFetchStatus])
 
     return (

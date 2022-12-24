@@ -102,8 +102,7 @@ export const GlobalProvider = (props) => {
                 salary_min,
                 salary_max
             }, { headers: { "Authorization": "Bearer" + Cookies.get('token') } })
-                .then((res) => {
-                    let data = res.data
+                .then(() => {
                     setFetchStatus(true)
                 })
         } else {

@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom'
 
 const MainContent = () => {
 
-    const [display, setDisplay] = useState(false)
     const { state } = useContext(GlobalContext)
 
     const {
@@ -21,14 +20,15 @@ const MainContent = () => {
     useEffect(() => {
 
 
-        if(fetchStatus === true) {
+        if (fetchStatus === true) {
 
             axios.get('https://dev-example.sanbercloud.com/api/job-vacancy')
-            .then((res) => {
+                .then((res) => {
                     setDatas([...res.data.data])
                 })
             setFetchStatus(false)
         }
+        // eslint-disable-next-line
     }, [fetchStatus, setFetchStatus])
 
     const [search, setSearch] = useState("")
@@ -41,7 +41,6 @@ const MainContent = () => {
         let fetchDatas = async () => {
 
             setDatas(null)
-            setDisplay(true)
             let { data } = await axios.get(`https://dev-example.sanbercloud.com/api/job-vacancy`)
 
             let dataJob = data.data
@@ -54,7 +53,6 @@ const MainContent = () => {
 
             console.log(searchData)
 
-            setDisplay(false)
             setDatas([...searchData])
         }
         fetchDatas()
