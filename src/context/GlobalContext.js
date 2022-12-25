@@ -39,37 +39,10 @@ export const GlobalProvider = (props) => {
         currentId, setCurrentId
     }
 
-
-
     const handleInput = (e) => {
-        let name = e.target.name
-        let value = e.target.value
-
-        if (name === "title") {
-            setInput({ ...input, title: value })
-        } else if (name === "job_description") {
-            setInput({ ...input, job_description: value })
-        } else if (name === "job_qualification") {
-            setInput({ ...input, job_qualification: value })
-        } else if (name === "job_type") {
-            setInput({ ...input, job_type: value })
-        } else if (name === "job_tenure") {
-            setInput({ ...input, job_tenure: value })
-        } else if (name === "job_status") {
-            setInput({ ...input, job_status: value })
-        } else if (name === "company_name") {
-            setInput({ ...input, company_name: value })
-        } else if (name === "company_image_url") {
-            setInput({ ...input, company_image_url: value })
-        } else if (name === "company_city") {
-            setInput({ ...input, company_city: value })
-        } else if (name === "salary_min") {
-            setInput({ ...input, salary_min: value })
-        } else if (name === "salary_max") {
-            setInput({ ...input, salary_max: value })
-        }
+        let { value, name } = e.target
+        setInput({ ...input, [name]: value })
     }
-
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -125,11 +98,11 @@ export const GlobalProvider = (props) => {
                 .catch((err) => {
                     console.log(err)
                 })
-            } 
-            setCurrentId(-1)
-            navigate('/dashboard/list-job-vacancy')
+        }
+        setCurrentId(-1)
+        navigate('/dashboard/list-job-vacancy')
     }
-    
+
 
     let handleFunction = {
         handleLogout, handleInput, handleSubmit

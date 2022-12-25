@@ -9,6 +9,7 @@ import Dashboard from './Components/Dashboard';
 import Register from './Components/Register';
 import Cookies from 'js-cookie';
 import FormCreateData from './Components/FormCreateData';
+import ChangePassword from './Components/ChangePassword';
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
             } />
 
             <Route path='/register' element={<Register />} />
+            <Route path='/changepassword' element={<ChangePassword />} />
 
             <Route path='/dashboard/list-job-vacancy' element={
               <DashboardRoute>

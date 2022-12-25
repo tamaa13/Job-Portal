@@ -36,9 +36,7 @@ const Register = () => {
         } = registerInput
 
         axios.post(`https://dev-example.sanbercloud.com/api/register`, { name, email, image_url, password })
-            .then((res) => {
-                // eslint-disable-next-line
-                let data = res.data
+            .then(() => {
 
                 navigate('/login')
             })
