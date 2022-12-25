@@ -13,6 +13,7 @@ const FormCreateData = () => {
         handleSubmit, handleInput
     } = handleFunction
 
+
     return (
         <>
             <div className='Card'>

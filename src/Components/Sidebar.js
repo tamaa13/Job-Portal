@@ -13,7 +13,7 @@ const Sidebar = () => {
 
     return (
         <>
-            <div className="relative hidden h-screen shadow-lg lg:block w-80 ">
+            <div className="relative hidden h-screen shadow-lg lg:block" style={{width :"230px"}}>
                 <div className="h-full bg-white dark:bg-gray-700">
                     <div className="flex items-center justify-start pt-6 ml-8">
                         <p className="text-xl font-bold dark:text-white">
