@@ -58,7 +58,7 @@ const ChangePassword = () => {
                                             </path>
                                         </svg>
                                     </span>
-                                    <input onChange={handleInputChangePassword} required name='current_password' value={changeInputPassword.current_password} type="password" className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Current password" />
+                                    <input autocomplete="on" onChange={handleInputChangePassword} required name='current_password' value={changeInputPassword.current_password} type="password" className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Current password" />
                                 </div>
                             </div>
                             <div className="flex flex-col mb-1">
@@ -69,7 +69,7 @@ const ChangePassword = () => {
                                             </path>
                                         </svg>
                                     </span>
-                                    <input onChange={handleInputChangePassword} required name='new_password' value={changeInputPassword.new_password} type="password" className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="New password" />
+                                    <input autocomplete="on" onChange={handleInputChangePassword} required name='new_password' value={changeInputPassword.new_password} type="password" className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="New password" />
                                 </div>
                             </div>
                             <div className="flex flex-col mb-6">
@@ -80,7 +80,7 @@ const ChangePassword = () => {
                                             </path>
                                         </svg>
                                     </span>
-                                    <input onChange={handleInputChangePassword} required name='new_confirm_password' value={changeInputPassword.new_confirm_password} type="password" className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Confirm password" />
+                                    <input autocomplete="on" onChange={handleInputChangePassword} required name='new_confirm_password' value={changeInputPassword.new_confirm_password} type="password" className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Confirm password" />
                                 </div>
                             </div>
                             <div className="flex w-full">
