@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from '../context/GlobalContext'
 
-
 const FormCreateData = () => {
 
     const { state, handleFunction } = useContext(GlobalContext)
@@ -13,8 +12,6 @@ const FormCreateData = () => {
     const {
         handleSubmit, handleInput
     } = handleFunction
-
-
 
     return (
         <>

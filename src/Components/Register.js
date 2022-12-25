@@ -37,11 +37,8 @@ const Register = () => {
 
         axios.post(`https://dev-example.sanbercloud.com/api/register`, { name, email, image_url, password })
             .then(() => {
-
                 navigate('/login')
             })
-
-
     }
 
 

@@ -7,7 +7,7 @@ const Login = () => {
 
     let navigate = useNavigate()
 
-    const [input, setInput] = useState(
+    const [inputLogin, setInputLogin] = useState(
         {
             email: "",
             password: ""
@@ -16,13 +16,13 @@ const Login = () => {
 
     const handleInput = (e) => {
         let { value, name } = e.target
-        setInput({ ...input, [name]: value })
+        setInputLogin({ ...inputLogin, [name]: value })
     }
 
     const handleLogin = (e) => {
         e.preventDefault()
 
-        let { email, password } = input
+        let { email, password } = inputLogin
 
         axios.post(`https://dev-example.sanbercloud.com/api/login`, { email, password })
             .then((res) => {
@@ -54,7 +54,7 @@ const Login = () => {
                                             </path>
                                         </svg>
                                     </span>
-                                    <input required onChange={handleInput} value={input.email} name='email' type="text" className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Your email" />
+                                    <input required onChange={handleInput} value={inputLogin.email} name='email' type="text" className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Your email" />
                                 </div>
                             </div>
                             <div className="flex flex-col mb-6">
@@ -65,7 +65,7 @@ const Login = () => {
                                             </path>
                                         </svg>
                                     </span>
-                                    <input required onChange={handleInput} value={input.password} name='password' type="password" className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Your password" />
+                                    <input required onChange={handleInput} value={inputLogin.password} name='password' type="password" className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Your password" />
                                 </div>
                             </div>
                             <div className="flex w-full">

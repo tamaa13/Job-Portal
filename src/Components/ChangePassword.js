@@ -30,11 +30,7 @@ const ChangePassword = () => {
         } = changeInputPassword
 
         axios.post(`https://dev-example.sanbercloud.com/api/change-password`, { current_password, new_password, new_confirm_password }, { headers: { "Authorization": "Bearer" + Cookies.get('token') } })
-            .then((res) => {
-                let { token, user } = res.data
-
-                Cookies.set('token', token, { expires: 7 })
-                Cookies.set('user', JSON.stringify(user), { expires: 7 })
+            .then(() => {
 
                 navigate('/dashboard/list-job-vacancy')
             })
